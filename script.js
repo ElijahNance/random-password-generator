@@ -49,6 +49,8 @@ function generatePassword() {
     console.log(password);
 
     //Created a for loop so the built in math function would run until the length met the user criteria
+    //Math.floor gives  index of character to pick based off seed data
+    //substring picks the character out of seed data
     for (var i = 0; i < passwordLength; i++) {
         var random = Math.floor(Math.random() * password.length);
         output += password.substring(random, random +1);

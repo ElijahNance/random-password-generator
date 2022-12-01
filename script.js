@@ -8,6 +8,8 @@ function generatePassword() {
     var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var numbers = "0987654321";
     var specialCharacters = "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+    var random = 0
+    var output ="";
 
     while(1===1) {
         passwordLength = window.prompt("Choose a number between 8-128 for password length");
@@ -41,6 +43,13 @@ function generatePassword() {
         password += specialCharacters;
     };
     console.log(password);
+
+    for (var i = 0; i < passwordLength; i++) {
+        var random = Math.floor(Math.random() * password.length);
+        output += password.substring(random, random +1);
+    } 
+
+    return output;
 }
 
 // Write password to the #password input

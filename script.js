@@ -23,7 +23,6 @@ function generatePassword() {
                 alert("Please select a number between 8-128");
             }
             else {
-                console.log(passwordLength);
                 break;
             }
         }
@@ -31,22 +30,18 @@ function generatePassword() {
     if (confirm("Do you want to have uppercase letters in your password?")) {
         password+=uppercaseLetters;     
     };
-    console.log(password);
 
     if (confirm("Do you want to have lowercase letters in your password?")) {
         password += lowercaseLetters;    
     };
-    console.log(password);
 
     if (confirm("Do you want to have numbers in your password?")) {
         password += numbers
     };
-    console.log(password);
 
     if (confirm("Do you want to have special characters in your password?")) {
         password += specialCharacters;
     };
-    console.log(password);
 
     //Created a for loop so the built in math function would run until the length met the user criteria
     //Math.floor gives  index of character to pick based off seed data
